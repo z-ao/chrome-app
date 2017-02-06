@@ -1,0 +1,25 @@
+{
+    "manifest_version": 2,
+    "name": "电影广告",
+    "version": "1.0",
+    "description": "我的第一个Chrome扩展",
+    "icons": {
+        "16": "images/icon.jpg",
+        "48": "images/icon.jpg",
+        "128": "images/icon.jpg"
+    },
+    "browser_action": {
+        "default_icon": {
+            "19": "images/icon.jpg",
+            "38": "images/icon.jpg"
+        },
+        "default_title": "电影广告",
+        "default_popup": "popup.html"
+    },
+    "content_scripts":  [
+        {
+          "matches": ["http://www.dy2018.com/*"],
+          "js": [ "js/clear_adv.js"]
+        }
+    ]
+}
